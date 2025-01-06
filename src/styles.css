@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols:wght@100..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&display=swap");
+
 body {
   background: url("https://4kwallpapers.com/images/walls/thumbs_3t/20219.jpg");
   background-size: cover;
+  font-family: "Playwrite AT", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
 }
