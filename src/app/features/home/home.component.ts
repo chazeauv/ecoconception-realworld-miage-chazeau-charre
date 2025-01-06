@@ -1,4 +1,11 @@
-import { Component, inject, OnDestroy, OnInit } from "@angular/core";
+import {
+  Component,
+  ElementRef,
+  inject,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from "@angular/core";
 import { Router } from "@angular/router";
 import { TagsService } from "../../core/services/tags.service";
 import { ArticleListConfig } from "../../core/models/article-list-config.model";
@@ -35,6 +42,14 @@ export class HomeComponent implements OnInit, OnDestroy {
     .pipe(tap(() => (this.tagsLoaded = true)));
   tagsLoaded = false;
   destroy$ = new Subject<void>();
+
+  @ViewChild("myAudio") audio: ElementRef | undefined;
+
+  playAudio() {
+    if (this.audio?.nativeElement) {
+      this.audio.nativeElement.play();
+    }
+  }
 
   constructor(
     private readonly router: Router,
