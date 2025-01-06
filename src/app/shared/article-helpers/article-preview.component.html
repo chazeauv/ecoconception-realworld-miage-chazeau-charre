@@ -1,4 +1,4 @@
-<div class="article-preview">
+<div *ngIf="okArticle" class="article-preview">
   <app-article-meta [article]="article">
     <app-favorite-button
       [article]="article"
@@ -25,10 +25,10 @@
   <br /><br />
   <div style="border: black 1px solid; width: fit-content">
     <a
-      href="https://twitter.com/intent/tweet?button_hashtag=thisIsElonMusk&ref_src=twsrc%5Etfw"
-      class="twitter-hashtag-button"
+      href="https://twitter.com/x?ref_src=twsrc%5Etfw"
+      class="twitter-follow-button"
       data-show-count="false"
-      >Tweet #thisIsElonMusk</a
+      >Follow on X</a
     >
     <script
       async

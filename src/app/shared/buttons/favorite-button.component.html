@@ -1,4 +1,5 @@
 <button
+  *ngIf="isLoaded"
   class="btn btn-sm"
   [ngClass]="{
     disabled: isSubmitting,
